@@ -1,0 +1,333 @@
+/* -------------- GENERAL -------------- */
+
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header {
+    background-color: #a090e9;
+    border-bottom: 1px solid #CCC;
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #F2A340;
+    border: 2px solid #C28008;
+}
+
+.btn-primary:hover {
+    background-color: #C28008;
+    border-color: #C28008;
+}
+
+.msg {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* -------------- NAVBAR -------------- */
+
+#navbar img {
+    width: 120px;
+    margin-left: 10px;
+}
+
+#navbar {
+    justify-content: space-between;
+    background-color: #a090e9;
+    padding: 5px 0;
+}
+
+#navbar a {
+    font-size: 14px;
+    color: #FFFF
+}
+
+#navbar a:hover {
+    color: #C28008;
+}
+
+/* -------------- SEARCH CONTAINER -------------- */
+
+#search-container {
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1 {
+    color: #FFF;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* -------------- GAME LIST -------------- */
+
+#games-container {
+    padding: 50px;
+}
+
+#games-container h2 {
+    margin-bottom: 10px;
+}
+
+#games-container h2 {
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+#cards-container {
+    display: flex;
+}
+
+#games-container .card {
+    flex: 1 1 24%;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: .5%;
+}
+
+#games-container img {
+    max-height: 200px;
+    min-height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#games-container h1.search-info {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#games-container h2.lastadd-info {
+    font-size: 30px
+}
+
+.card .card-title {
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card .platform {
+    font-size: 15px;
+    color: #212121;
+    margin-bottom: 0px;
+}
+
+.card ion-icon {
+    font-size: 20px;
+    color: #a090e9;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.card-body p.release-date {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+#platforms-list {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+#platforms-list-welcome {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+#platforms-list-welcome li {
+    flex: 1 1 1%;
+    padding: 3px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    max-width: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+#platforms-list-welcome li.switch {
+    max-width: 55px;
+}
+
+#platforms-list li{
+    padding-bottom: 8px;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+#info-container p.platform {
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+#platforms-list span#icon {
+    color: #a090e9;
+    margin-right: 5px;
+}
+
+#platforms-list-welcome span#icon {
+    color: #a090e9;
+    margin-right: 5px;
+}
+
+#games-container span.bi-controller {
+    color: #a090e9;
+    margin-right: 2px;
+}
+
+#info-container span.bi-controller {
+    color: #a090e9;
+    margin-right: 7px;
+}
+
+/* -------------- GAME CREATE PAGE -------------- */
+
+#game-create-container {
+    padding: 30px;
+}
+
+#game-create-container label {
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+#game-create-container input,
+#game-create-container textarea {
+    font-size: 12px;
+}
+
+#game-create-container .btn {
+    margin-top: 10px;
+}
+
+#game-create-container #platform-checkbox {
+    margin-left: 5px;
+}
+
+
+/* -------------- GAME UNI PAGE -------------- */
+
+#image-container, #info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+    min-height: 300px;
+    max-height: 300px;
+    max-width: 450px;
+    min-width: 450px;
+}
+
+#info-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container strong.user-owner {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#info-container strong.date-create {
+    margin-left: 5px;
+}
+#info-container p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container h3, #description-container h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#info-container ion-icon {
+    font-size: 20px;
+    color: #a090e9;
+    margin-right: 5px;
+}
+
+/* -------------- MEUS CADASTROS -------------- */
+
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-games-container th {
+    width: 25%;
+}
+
+.dashboard-games-container form {
+    display: inline-block;
+}
+
+.dashboard-games-container form .btn{
+    font-size: 12px;
+}
+
+.dashboard-games-container .btn{
+    font-size: 12px;
+}
+
+/* -------------- EDIT PAGE -------------- */
+
+.img-preview {
+    width: 100px;
+    margin-top: 10px;
+}
+
+/* -------------- FOOTER -------------- */
+
+footer {
+    text-align: center;
+    background-color: #a090e9;
+    color: #FFF;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
