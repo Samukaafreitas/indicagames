@@ -5,7 +5,7 @@
 <div class="col-md-10 offset-md-1 dashboard-title-container">
     <h1 class="my-games">Meus games cadastrados:</h1>
 </div>
-<div class="col-md-10 offset-md-1 dashboard-plans-container">
+<div class="col-md-10 offset-md-1 dashboard-games-container">
     @if(count($games) > 0)
         <table class="table">
             <thead>
@@ -16,7 +16,7 @@
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
-            <tbody id="mygames-container">
+            <tbody id="mygames-container ">
                 @foreach($games as $game)
                     <tr>
                         <td class="hash" scropt="row">{{ $loop->index + 1 }}</td>
@@ -29,6 +29,7 @@
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon>Deletar</button>
                             </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
