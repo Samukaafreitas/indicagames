@@ -28,6 +28,20 @@
                 <div>
                     <label for="platform">Plataforma:</label>
                 </div>
+                @foreach($plataformas as $chave => $valor)
+                    @if(in_array($chave, $platformsSelecionadas))
+                        <div class="form-group">
+                            <input type="checkbox" name="platform[]" value="{{$chave}}" checked> {{$valor}} </br>
+                        </div>
+                    @else
+                    <div class="form-group">
+                        <input type="checkbox" name="platform[]" value="{{$chave}}"> {{$valor}} </br>
+                    </div>
+                    @endif
+                    
+                @endforeach
+
+                <!--
                 <div class="form-group">
                     <input type="checkbox" name="platform[]" value="pc"> PC </br>
                 </div>
@@ -46,6 +60,7 @@
                 <div class="form-group">
                     <input type="checkbox" name="platform[]" value="snes"> SNES/NES </br>
                 </div>
+-->
         </div>
         <input type="submit" class="btn btn-primary" value="Editar Game">
     </form>

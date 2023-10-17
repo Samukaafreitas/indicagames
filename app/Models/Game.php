@@ -13,7 +13,9 @@ class Game extends Model
         'platform' => 'array'
     ];
 
-    protected $dates = ['data_lancamento'];
+    protected $dates = [
+        'data_lancamento'
+    ];
 
     protected $guarded = [];
 

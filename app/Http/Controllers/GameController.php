@@ -8,6 +8,19 @@ use App\Models\User;
 
 class GameController extends Controller
 {
+    protected $plataformas = [];
+
+    public function __construct()
+    {
+        $this->plataformas = [
+            'pc'=>'PC',
+            'xbox'=>'XBOX',
+            'ps4'=>'PS4',
+            'ps5'=>'PS5',
+            'switch'=>'Nintendo Switch'
+        ];
+    }
+
     public function index() {
 
         $search = request('search');
@@ -29,6 +42,12 @@ class GameController extends Controller
 
     public function store(Request $request) {
 
+        $request->validate([
+            'title' => 'required|max:100'
+        ],[
+            'title.required'=>'O campo título é obrigatório'
+        ]);
+        
         $game = new Game;
 
         $game->title = $request->title;
@@ -96,8 +115,13 @@ class GameController extends Controller
     public function edit($id) {
 
         $game = Game::findOrFail($id);
+        $platformsSelecionadas = collect($game->platform)->toArray();
 
-        return view('game.edit', ['game' => $game]);
+        return view('game.edit', [
+            'game' => $game,
+            'plataformas' => $this->plataformas,
+            'platformsSelecionadas'=>$platformsSelecionadas
+        ]);
 
     }
 
